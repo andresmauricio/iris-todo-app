@@ -5,6 +5,7 @@ import { TodoRoutingModule } from './todo-routing.module';
 import { HomeComponent } from './containers/home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { InputComponent } from './components/input/input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { InputComponent } from './components/input/input.component';
   imports: [
     CommonModule,
     TodoRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class TodoModule { }

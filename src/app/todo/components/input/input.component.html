@@ -1,4 +1,4 @@
-<div class="input--container">
-  <input placeholder="Add Task" class="input">
-  <i class="fas fa-plus"></i>
-</div>
+<form class="input--container">
+  <input placeholder="Add Task" class="input" #task>
+  <i class="fas fa-plus" (click)="addTask(task.value)"></i>
+</form>
