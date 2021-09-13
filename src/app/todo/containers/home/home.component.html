@@ -2,5 +2,10 @@
   <app-navbar></app-navbar>
   <h1 class="home__title">To do List</h1>
   <app-input (sendTask)="addTask($event)"></app-input>
-  <app-task (changeStatus)="chageState($event)" [task]="task" *ngFor="let task of tasks"></app-task>
+  <app-task
+    (changeStatus)="chageState($event)"
+    (deleteItem)="deleteTask($event)"
+    [task]="task"
+    *ngFor="let task of tasks"
+  ></app-task>
 </section>

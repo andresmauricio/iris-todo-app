@@ -25,5 +25,15 @@ export class TaskService {
     console.log(this.tasks);
   }
 
-  deleteTask(id: string) {}
+  deleteTask(id: string) {
+    for (let index = 0; index < this.tasks.length; index++) {
+      if (this.tasks[index].id === id) {
+        console.log(index);
+
+        this.tasks.splice(index, 1);
+      }
+    }
+    console.log(this.tasks);
+    
+  }
 }

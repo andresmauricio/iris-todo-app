@@ -9,6 +9,7 @@ import { Task } from 'src/app/shared/models/ITask';
 export class TaskComponent implements OnInit {
   @Input() task!: Task;
   @Output() changeStatus = new EventEmitter();
+  @Output() deleteItem = new EventEmitter();
 
   constructor() {}
 
@@ -16,5 +17,9 @@ export class TaskComponent implements OnInit {
 
   change(id: string) {
     this.changeStatus.emit(id);
+  }
+
+  delete(id: string) {
+    this.deleteItem.emit(id);
   }
 }
