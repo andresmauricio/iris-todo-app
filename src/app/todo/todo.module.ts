@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TodoRoutingModule } from './todo-routing.module';
 import { HomeComponent } from './containers/home/home.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { HomeComponent } from './containers/home/home.component';
   ],
   imports: [
     CommonModule,
-    TodoRoutingModule
+    TodoRoutingModule,
+    SharedModule
   ]
 })
 export class TodoModule { }
