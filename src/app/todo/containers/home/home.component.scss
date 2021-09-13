@@ -2,7 +2,7 @@
 @import "../../../../styles/colors";
 
 .home {
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
   height: 100%;
   margin-top: 50px;
@@ -12,5 +12,18 @@
     font-size: 30px;
     font-weight: bold;
     color: $secondary;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  &__subtitle::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed $secondary;
   }
 }
