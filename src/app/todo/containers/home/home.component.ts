@@ -25,4 +25,10 @@ export class HomeComponent implements OnInit {
     };
     this.taskService.addTask(newTask);
   }
+
+  chageState(id: string) {
+    console.log(id);
+    
+    this.taskService.updateTask(id);
+  }
 }

@@ -1,6 +1,6 @@
 <div class="task">
   <div class="task__detail">
-    <input type="checkbox" [checked]="task.status" />
+    <input type="checkbox" [checked]="task.status" (change)="change(task.id)" />
     <p class="task__title">{{ task.name }}</p>
   </div>
   <i class="fas fa-times"></i>
