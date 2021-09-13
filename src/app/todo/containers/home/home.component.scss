@@ -14,3 +14,31 @@
     color: $secondary;
   }
 }
+
+.task { 
+  @include display-flex(space-between, center, row);
+  margin: 30px 0;
+
+  &__detail {
+    @include display-flex(space-between, center, row);
+
+    input {
+      margin-right: 10px;
+      transform: scale(2);
+
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    color: $secondary;
+  }
+
+  i {
+    font-size: 20px;
+    cursor: pointer;
+    color: $danger
+  }
+
+}

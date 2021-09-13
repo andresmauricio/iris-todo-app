@@ -1,7 +1,15 @@
 <section class="home">
   <app-navbar></app-navbar>
   <h1 class="home__title">To do List</h1>
+  <app-input (sendTask)="addTask($event)"></app-input>
+  <!-- list of task -->
 
-  <!-- add task -->
- <app-input (sendTask)="addTask($event)"></app-input>
+  <div class="task" *ngFor="let task of tasks">
+    <div class="task__detail">
+      <input type="checkbox" [checked]="task.status">
+      <p class="task__title">{{task.name}}</p>
+    </div>
+    <i class="fas fa-times"></i>
+  </div>
+
 </section>

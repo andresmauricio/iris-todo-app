@@ -17,8 +17,10 @@
 
   i {
     position: absolute;
-    top: 12px;
+    top: 10px;
     right: 10px;
     cursor: pointer;
+    color: $secondary;
+    font-size: 20px;
   }
 }
