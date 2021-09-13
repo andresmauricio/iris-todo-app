@@ -8,9 +8,9 @@
   @include display-flex(center, center, column);
 
   &__title {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     color: $white;
   }
 }
