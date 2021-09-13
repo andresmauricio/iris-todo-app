@@ -1,0 +1,16 @@
+@import "../../../../styles/mixings";
+@import "../../../../styles/colors";
+
+.home {
+  max-width: 700px;
+  margin: 0 auto;
+  height: 100%;
+  margin-top: 50px;
+
+  &__title {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: $secondary;
+  }
+}
