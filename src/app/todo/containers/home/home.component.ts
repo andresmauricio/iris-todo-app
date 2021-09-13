@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from 'src/app/shared/models/ITask';
+import { TaskService } from '../../services/task.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-home',
@@ -6,16 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public tasks = [
-    { status: true, name: 'Desarrollar componente tabla Vue.js', id: "1" },
-    { status: false, name: 'Relizar ibntegración Paypal', id: "2" },
-    { status: true, name: 'Levantar requisitos nuevos', id: "3" },
-  ];
-  constructor() {}
+  public tasks: Task[] = [];
+
+  constructor(private taskService: TaskService) {
+    this.tasks = taskService.tasks;
+  }
 
   ngOnInit(): void {}
 
   addTask(task: string) {
-    console.log(task);
+    const newTask: Task = {
+      name: task,
+      status: false,
+      id: uuidv4(),
+    };
+    this.taskService.addTask(newTask);
   }
 }
