@@ -26,11 +26,17 @@ export class HomeComponent implements OnInit {
     this.taskService.addTask(newTask);
   }
 
-  chageState(id: string) {    
+  chageState(id: string) {
     this.taskService.updateTask(id);
   }
 
-  deleteTask(id: string) {    
+  deleteTask(id: string) {
     this.taskService.deleteTask(id);
+  }
+
+  changeOption(option: 'ALL' | 'COMPLETED' | 'IN PROGRESS') {
+    this.taskService.filterTaskForOptions(option);
+    this.tasks = this.taskService.tasks;
+
   }
 }

@@ -1,7 +1,7 @@
 <section class="home">
   <app-navbar></app-navbar>
   <h1 class="home__title">To do List</h1>
-  <app-select></app-select>
+  <app-select (sendOption)="changeOption($event)"></app-select>
   <app-input (sendTask)="addTask($event)"></app-input>
   <h2 class="home__subtitle">All</h2>
   <app-task

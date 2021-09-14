@@ -1,8 +1,8 @@
 <div class="select__container">
-  <select name="" id="">
-    <option value="">ALL</option>
-    <option value="">COMPLETED</option>
-    <option value="">IN PROGRESS</option>
+  <select name="" id="" (change)="changeOption(option.value)" #option>
+    <option value="ALL">ALL</option>
+    <option value="COMPLETED">COMPLETED</option>
+    <option value="IN PROGRESS">IN PROGRESS</option>
   </select>
   <i class="fas fa-chevron-down"></i>
 </div>
