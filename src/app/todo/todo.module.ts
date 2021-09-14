@@ -7,13 +7,15 @@ import { SharedModule } from '../shared/shared.module';
 import { InputComponent } from './components/input/input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskComponent } from './components/task/task.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     InputComponent,
-    TaskComponent
+    TaskComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
